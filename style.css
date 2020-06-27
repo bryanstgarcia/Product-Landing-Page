@@ -1,0 +1,136 @@
+/*  ------------------------FONTS AND COLOR----------------------------------- */
+
+/* Poiret One 400: font-family: 'Poiret One', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
+/* Roboto Mono 100 to 700, regular, medium and bold all with italic: font-family: 'Roboto Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* Inconsolata 100 to 900, regular, medium, bold, extra bold and black all with italic: font-family: 'Inconsolata', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* ----------------------------GLOBAL------------------------------------------- */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 12px;
+
+    /* fonts var */
+    --fnt-title: 'Poiret One', cursive;
+    --fnt-sub: 'Roboto Mono', monospace;
+    --fnt-p: 'Inconsolata', monospace;
+
+    --fnt-size-big: 3rem;
+    --fnt-size-med: 2rem;
+    --fnt-size-smll: 1.5rem;
+
+    /* Colors */
+    --clr-dark-1: #131313;
+    --clr-dark-2: #212121;
+    --clr-bright-1: #FFFFFF;
+    --clr-bright-2: #FFC200;
+
+    /* Spaccing Variables */
+    --size-big: 4rem;
+    --size-med: 3rem;
+    --size-smll: 1.5rem;
+    --size-ltl: 0.8rem;
+
+    /* Border variables */
+    --brd-big: 20px;
+    --brd-med: 15px;
+    --brd-smll: 10px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: var(--clr-dark-1); */
+}
+
+/* ---------------------------------HEADER----------------------------------- */
+
+#header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+
+    background-color: var(--clr-dark-1);
+}
+
+/* ---NAV--- */
+
+#nav-bar {
+    grid-column: 1 / 2;
+}
+/* ---LOGO--- */
+
+.logo {
+    grid-column: 2 / 3;
+}
+
+/* ---REDES--- */
+
+.redes {
+    grid-column: 3 / 4;
+
+}
+.img-redes {
+    width: 30px;
+}
+
+/* ----------------------------------MAIN------------------------------------ */
+
+#main {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ---INTRO--- */
+
+.intro {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+
+
+
+/* ---FIRST--- */
+.first {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+
+/* ---SECOND--- */
+
+.second {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+}
+
+/* ---MEDIA--- */
+
+.media {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+}
+
+/* ---TARJETA--- */
+
+.tajeta-box {
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+}
+
+/* ---FORMULARIO--- */
+ #form {
+     grid-column: 1 / -1;
+     grid-row: 6 / 7;
+ }

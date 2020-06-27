@@ -6,28 +6,29 @@
     <meta name="content" content="Bootcamp de desarrollo web">
     <meta name="autor" content="BryanstGarcia">
     <meta name="keywords" content="development, Bootcamp, back-end, Desarrollo, Web, front-end">
-    <title>Silicoding Bootcamp</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Silicoding | Bootcamp</title>
 </head>
 <body>
     <header class="" id="header">
         <nav id="nav-bar">
             <ul>
-                <li class="nav-link"><a href="#informacion" class="">info</a></li>
-                <li class="nav-link"><a href="#precios" class="">precio</a></li>
-                <li class="nav-link"><a href="#form" class="">contacto</a></li>
+                <li class=""><a class="nav-link" href="#informacion" >info</a></li>
+                <li class=""><a class="nav-link" href="#precios" >precio</a></li>
+                <li class=""><a class="nav-link" href="#form" >contacto</a></li>
             </ul>
         </nav>
         <div class="logo">
-            <img id="header-img" src="" alt="">
+            <img id="header-img" src="/fotos/logo/update sin fondo 2.3.1.svg" alt="">
         </div>
         <div class="redes">
-            <a href="" class="link-redes"><img src="" alt="" class="img-redes"></a>
-            <a href="" class="link-redes"><img src="" alt="" class="img-redes"></a>
-            <a href="" class="link-redes"><img src="" alt="" class="img-redes"></a>
-            <a href="" class="link-redes"><img src="" alt="" class="img-redes"></a>
+            <a href="" class="link-redes"><img src="/fotos/redes-sociales/instagram.png" alt="" class="img-redes" id="header-instagram"></a>
+            <a href="" class="link-redes"><img src="/fotos/redes-sociales/twitter.png" alt="" class="img-redes" id="header-twitter" ></a>
+            <a href="" class="link-redes"><img src="/fotos/redes-sociales/whatsapp.png" alt="" class="img-redes" id="header-whatsapp"></a>
+            <a href="" class="link-redes"><img src="/fotos/redes-sociales/linkedin.png" alt="" class="img-redes" id="header-linkedin"></a>
         </div>
     </header>
-    <main>
+    <main id="main">
         <div class="intro">
             <div class="intro-text">
                 <h1>Aprende desarrollo web</h1>
@@ -53,7 +54,6 @@
         <div class="second">
             <div class="second-img">
                 <img src="" alt="">
-                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/ElzJhJ0esKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="second-info">
                 <h2>Proyectos con personas de todo el mundo</h2>
@@ -61,6 +61,9 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicingo</p>
                 <span class="second-btn">¡Inscríbete!</span>
             </div>
+        </div>
+        <div class="media">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/TJ1SDXbij8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="tarjeta-box" id="precios">
             <div class="tarjeta tarjeta-1">
@@ -90,22 +93,21 @@
                 </div>
                 <p class="tarjeta-btn">Inscribirme</p>
             </div>
-            <form id="form" action=" https://www.freecodecamp.com/email-submit" method="POST">
-                <h3>¿Alguna duda?</h3>
-
-                <label for="name">Nombres y apellidos</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre(s) y apellido(s)" required>
-
-                <label for="email">Correo electrónico</label>
-                <input type="email" name="email" id="email" placeholder="email@dominio.com" requiered>
-
-                <label for="info">¿Cómo podemos ayudarte?</label>
-                <textarea name="info" id="info" cols="30" rows="10" required></textarea>
-
-                <button id="submit" type="submit">Envíar</button>
-            </form>
         </div>
+        <form id="form" action=" https://www.freecodecamp.com/email-submit" method="POST">
+            <h3>¿Alguna duda?</h3>
 
+            <label for="name">Nombres y apellidos</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre(s) y apellido(s)" required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" placeholder="email@dominio.com" requiered>
+
+            <label for="info">¿Cómo podemos ayudarte?</label>
+            <textarea name="info" id="info" cols="30" rows="10" required></textarea>
+
+            <input id="submit" type="submit">
+        </form>
     </main>
     <footer>
 

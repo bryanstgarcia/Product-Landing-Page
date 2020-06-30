@@ -12,14 +12,14 @@
 <body>
     <header class="" id="header">
         <nav id="nav-bar">
-            <ul>
-                <li class=""><a class="nav-link" href="#informacion" >info</a></li>
-                <li class=""><a class="nav-link" href="#precios" >precio</a></li>
-                <li class=""><a class="nav-link" href="#form" >contacto</a></li>
+            <ul id="nav-list">
+                <li class="nav-item"><a class="nav-link" href="#informacion" >info</a></li>
+                <li class="nav-item"><a class="nav-link" href="#precios" >precio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#form" >contacto</a></li>
             </ul>
         </nav>
         <div class="logo">
-            <img id="header-img" src="/fotos/logo/update sin fondo 2.3.1.svg" alt="">
+            <img id="header-img" src="/fotos/logo/nombreletrablanca.png" alt="">
         </div>
         <div class="redes">
             <a href="" class="link-redes"><img src="/fotos/redes-sociales/instagram.png" alt="" class="img-redes" id="header-instagram"></a>
@@ -31,35 +31,34 @@
     <main id="main">
         <div class="intro">
             <div class="intro-text">
-                <h1>Aprende desarrollo web</h1>
-                <p>Desde cualquier parte del mundo</p>
+                <h1 class="intro-frase intro-title">Aprende desarrollo web</h1>
+                <p class="intro-frase intro-info">Desde cualquier parte del mundo</p>
             </div>
-            <span class="intro-btn">¡Inscribete ahora!</span>
-            <div class="intro-background">
-                <img src="" alt="">
-            </div>
+            <button type="submit" class="intro-btn">¡Inscríbete ahora!</button>
         </div>
         <div class="first" id="informacion">
             <div class="first-img">
-                <img src="" alt="">
+                <!-- <img src="fotos/fotos/confortable.jpg" alt=""> -->
             </div>
             <div class="first-info">
-                <h2>Aprende desde cualquier parte del mundo</h2>
-                <p>Dictado en mas de 24 idiomas</p>
-                <p>Asistencia online todos los días del año</p>
-                <p>Tutores personalizados</p>
-                <span class="first-btn">¡Inscribete!</span>
+                <h2 class="first-text first-title">Aprende desde cualquier parte del mundo</h2>
+                <ul class="first-text first-list">
+                    <li class="first-item">Dictado en mas de 24 idiomas</li>
+                    <li class="first-item">Asistencia online todos los días del año</li>
+                    <li class="first-item">Tutores personalizados</li>
+                </ul>
+                <button class="first-btn" type="submit" >¡Inscríbete!</button>
             </div>
         </div>
         <div class="second">
             <div class="second-img">
-                <img src="" alt="">
+                <img src="fotos/fotos/cowork.jpg" alt="">
             </div>
             <div class="second-info">
                 <h2>Proyectos con personas de todo el mundo</h2>
                 <p>Ipsa reiciendis molestiae vitae eum dolorum enim</p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicingo</p>
-                <span class="second-btn">¡Inscríbete!</span>
+                <button type="submit" class="second-btn">¡Inscríbete!</button>
             </div>
         </div>
         <div class="media">
@@ -73,7 +72,7 @@
                     <p class="descripcion-tarjeta">Lorem, ipsum dolor sit amet consectetur adipisicing elite</p>
                     <p class="precio-tarjeta">$3500</p>
                 </div>
-                <p class="tarjeta-btn">Inscribirme</p>
+                <button type="submit" class="tarjeta-btn">Inscribirme</button>
             </div>
             <div class="tarjeta tarjeta-2">
                 <h3 class="titulo-tarjeta">Full Stack</h3>
@@ -82,7 +81,7 @@
                     <p class="descripcion-tarjeta">Lorem, ipsum dolor sit amet consectetur adipisicing</p>
                     <p class="precio-tarjeta">$5500</p>
                 </div>
-                <p class="tarjeta-btn">Inscribirme</p>
+                <button type="submit" class="tarjeta-btn">Inscribirme</button>
             </div>
             <div class="tarjeta tarjeta-3">
                 <h3 class="titulo-tarjeta">Back-end</h3>
@@ -91,7 +90,7 @@
                     <p class="descripcion-tarjeta">Ipsa reiciendis molestiae vitae eum dolorum enimIpsa reiciendis molestiae vitae eum dolorum enim</p>
                     <p class="precio-tarjeta">$3500</p>
                 </div>
-                <p class="tarjeta-btn">Inscribirme</p>
+                <button type="submit" class="tarjeta-btn">Inscribirme</button>
             </div>
         </div>
         <form id="form" action=" https://www.freecodecamp.com/email-submit" method="POST">

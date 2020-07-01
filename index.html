@@ -51,62 +51,65 @@
             </div>
         </div>
         <div class="second">
-            <div class="second-img">
-                <img src="fotos/fotos/cowork.jpg" alt="">
-            </div>
             <div class="second-info">
-                <h2>Proyectos con personas de todo el mundo</h2>
-                <p>Ipsa reiciendis molestiae vitae eum dolorum enim</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicingo</p>
-                <button type="submit" class="second-btn">¡Inscríbete!</button>
+                <h2 class="second-text second-title">Proyectos con personas de todo el mundo</h2>
+                <ul class="second-text second-list">
+                    <li class="second-item">Ipsa reiciendis molestiae vitae eum dolorum enim</li>
+                    <li class="second-item">Lorem, ipsum dolor sit amet consectetur adipisicingo</li>
+                </ul>
+                <button class="second-btn" type="submit" >¡Inscríbete!</button>
+            </div>
+            <div class="second-img">
             </div>
         </div>
         <div class="media">
             <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/TJ1SDXbij8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="tarjeta-box" id="precios">
+        <div class="tarjeta-box">
             <div class="tarjeta tarjeta-1">
                 <h3 class="titulo-tarjeta">Front-End</h3>
-                <div class="info-tarjeta">
-                    <h4 class="subtitulo-tarjeta">24 semanas</h4>
-                    <p class="descripcion-tarjeta">Lorem, ipsum dolor sit amet consectetur adipisicing elite</p>
-                    <p class="precio-tarjeta">$3500</p>
+                <div class="tarjeta-info">
+                    <h4 class="tarjeta-subtitulo">24 semanas</h4>
+                    <p class="tarjeta-descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elite</p>
+                    <p class="tarjeta-precio">$3500</p>
                 </div>
                 <button type="submit" class="tarjeta-btn">Inscribirme</button>
             </div>
             <div class="tarjeta tarjeta-2">
                 <h3 class="titulo-tarjeta">Full Stack</h3>
-                <div class="info-tarjeta">
-                    <h4 class="subtitulo-tarjeta">48 semanas</h4>
-                    <p class="descripcion-tarjeta">Lorem, ipsum dolor sit amet consectetur adipisicing</p>
-                    <p class="precio-tarjeta">$5500</p>
+                <div class="tarjeta-info">
+                    <h4 class="tarjeta-subtitulo">48 semanas</h4>
+                    <p class="tarjeta-descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                    <p class="tarjeta-precio">$5500</p>
                 </div>
                 <button type="submit" class="tarjeta-btn">Inscribirme</button>
             </div>
             <div class="tarjeta tarjeta-3">
                 <h3 class="titulo-tarjeta">Back-end</h3>
-                <div class="info-tarjeta">
-                    <h4 class="subtitulo-tarjeta">30 semanas</h4>
-                    <p class="descripcion-tarjeta">Ipsa reiciendis molestiae vitae eum dolorum enimIpsa reiciendis molestiae vitae eum dolorum enim</p>
-                    <p class="precio-tarjeta">$3500</p>
+                <div class="tarjeta-info">
+                    <h4 class="tarjeta-subtitulo">30 semanas</h4>
+                    <p class="tarjeta-descripcion">Ipsa reiciendis molestiae vitae eum dolorum enimIpsa</p>
+                    <p class="tarjeta-precio">$3500</p>
                 </div>
                 <button type="submit" class="tarjeta-btn">Inscribirme</button>
             </div>
         </div>
-        <form id="form" action=" https://www.freecodecamp.com/email-submit" method="POST">
-            <h3>¿Alguna duda?</h3>
-
-            <label for="name">Nombres y apellidos</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre(s) y apellido(s)" required>
-
-            <label for="email">Correo electrónico</label>
-            <input type="email" name="email" id="email" placeholder="email@dominio.com" requiered>
-
-            <label for="info">¿Cómo podemos ayudarte?</label>
-            <textarea name="info" id="info" cols="30" rows="10" required></textarea>
-
-            <input id="submit" type="submit">
-        </form>
+        <div class="formulario">
+            <form id="form" action=" https://www.freecodecamp.com/email-submit" method="POST">
+                <h3 class="form-title">¿Alguna duda?</h3>
+    
+                <label class="form-element form-label" for="name">Nombres y apellidos</label>
+                <input class="form-element form-input" type="text" name="nombre" id="nombre" placeholder="Nombre(s) y apellido(s)" required>
+    
+                <label class="form-element form-label" for="email">Correo electrónico</label>
+                <input class="form-element form-input" type="email" name="email" id="email" placeholder="email@dominio.com" requiered>
+    
+                <label class="form-element form-label" for="info">¿Cómo podemos ayudarte?</label>
+                <textarea class="form-element" name="info" id="info" cols="30" rows="10" required></textarea>
+    
+                <input id="submit" type="submit">
+            </form>
+        </div>
     </main>
     <footer>
 

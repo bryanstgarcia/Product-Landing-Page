@@ -85,6 +85,7 @@ html {
 #nav-list {
     list-style: none;
     margin: 0;
+    color: var(--clr-bright-1);
 }
 .nav-item {
     display: inline-block;
@@ -354,7 +355,6 @@ html {
     grid-row: 4 / 5;
 
     width: 100%;
-    height: 100vh;
     background-color: var(--clr-dark-2);
     display: flex;
     align-items: center;
@@ -477,8 +477,8 @@ html {
     background-color: var(--clr-dark-2);
 }
  #form {
-    height: 70vh;
-    width: 30vw;
+    height: 70%;
+    width: 30%;
     border-radius: var(--brd-smll);
     border:3px solid var(--clr-bright-3);
     background-color: var(--clr-bright-1);
@@ -522,4 +522,89 @@ html {
      border: none;
      padding: 10px 20px;
      margin: 20px 5% 10px 5%;
+ }
+
+ /* -------------------MEDIA QUERYS-------------------- */
+
+ @media screen and (max-width: 768px) and (min-width: 400px) {
+     /* -----------GLOBAL TABLET-------- */
+    :root {
+            /* fonts var */
+
+    --fnt-size-title: 4rem;
+    --fnt-size-big: 2rem;
+    --fnt-size-med: 1.75rem;
+    --fnt-size-smll: 1.5rem;
+    --fnt-size-ltl: 1rem;
+
+    }
+
+/* -----------HEADER TABLET-------- */
+    
+
+/* ----------MAIN TABLET----------- */
+    #main {
+        grid-template-rows: 98vh 50vh 50vh 50vh 50vh 50vh;
+    }
+
+          /* ---INTRO--- */
+    .intro {
+        grid-template-areas: 
+        ". . . . . . . . . ."
+        ". t t t t t t t t ."
+        ". t t t t t t t t ."
+        ". . . b b b b . . ."
+        ". . . . . . . . . ."
+    ;
+    }
+
+    /* ---FIRST--- */
+    .first-item {
+        font-size: var(--fnt-size-smll);
+    }
+    .first-title {
+        font-size: var(--fnt-size-big);
+    }
+    
+    /* ---SECOND--- */
+
+    .second-item {
+        font-size: var(--fnt-size-smll);
+    }
+    .second-title {
+        font-size: var(--fnt-size-big);
+    }
+    .second-btn {
+        padding: 8px 15px;
+    }
+
+    /* ---MEDIA--- */
+
+    /* ---TARJETA--- */
+
+    .tarjeta-box {
+        grid-template: repeat(5, 10vh) / 1fr repeat(3, 28vw) 1fr;
+        grid-template-areas: 
+        ". . . . ."
+        ". a b c ."
+        ". a b c ."
+        ". a b c ."
+        ". . . . ."
+    ;
+    grid-column-gap: 3vw;
+    justify-content: center;
+    }
+    .tarjeta {
+        height: 100%;
+    }
+
+    /* ---FORMULARIO--- */
+    #form {
+        width: 50%;
+        height: 80%;
+    }
+
+
+ /* ----------FOOTER TABLET--------- */
+
  }

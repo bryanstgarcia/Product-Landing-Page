@@ -95,6 +95,7 @@ html {
 }
 .nav-link {
     text-decoration: none;
+    color: var(--clr-bright-1);
 }
 .nav-link:visited {
     color: var(--clr-bright-1);
@@ -130,7 +131,7 @@ html {
     padding: 0;
 
     display: grid;
-    grid-template-rows: repeat(4, 98vh) 70vh 50vh;
+    grid-template-rows: 98vh 70vh 70vh 98vh 70vh 50vh;
     z-index: -1;
     
 }
@@ -370,21 +371,26 @@ html {
 .tarjeta-box {
     grid-row: 5 / 6;
 
-    display: grid;
-    grid-template: repeat(5, 20%) / repeat(10, 10vw);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+/*     grid-template: repeat(5, 20%) / repeat(10, 10vw);
     grid-template-areas: 
         ". . . . . . . . . ."
         ". a a . b b . c c ."
         ". a a . b b . c c ."
         ". a a . b b . c c ."
         ". . . . . . . . . ."
-    ;
+    ; */
     background-color: var(--clr-dark-2);    
 }
 .tarjeta {
     background-color: var(--clr-bright-1);
-    width: 100%;
-    height: 100%;
+    width: 25%;
+    height: 70%;
 
     display: flex;
     flex-direction: column;
@@ -453,17 +459,6 @@ html {
 
 }
 
-.tarjeta-1 {
-   grid-area: a;
-}
-
-.tarjeta-2 {
-    grid-area: b;
-}
-
-.tarjeta-3 {
-    grid-area: c;
-}
 
 
 /* ---FORMULARIO--- */
@@ -526,7 +521,9 @@ html {
 
  /* -------------------MEDIA QUERYS-------------------- */
 
- @media screen and (max-width: 1024px) and (min-width: 400px) {
+ /* ---------------TABLET----------------- */
+
+ @media screen and (max-width: 1024px) and (min-width: 601px) {
      /* -----------GLOBAL TABLET-------- */
     :root {
             /* fonts var */
@@ -583,6 +580,7 @@ html {
     /* ---TARJETA--- */
 
     .tarjeta-box {
+        display: grid;
         grid-template: repeat(5, 10vh) / 1fr repeat(3, 28vw) 1fr;
         grid-template-areas: 
         ". . . . ."
@@ -596,6 +594,18 @@ html {
     }
     .tarjeta {
         height: 100%;
+        width: 100%;
+    }
+    .tarjeta-1 {
+        grid-area: a;
+    }
+
+    .tarjeta-2 {
+        grid-area: b;
+    }
+
+    .tarjeta-3 {
+        grid-area: c;
     }
 
     /* ---FORMULARIO--- */
@@ -606,5 +616,146 @@ html {
 
 
  /* ----------FOOTER TABLET--------- */
+
+ }
+/* -----------------PHONE----------------- */
+
+@media screen and (max-width: 600px) {
+     /* -----------GLOBAL PHONE-------- */
+     :root {
+        /* fonts var */
+
+--fnt-size-title: 3rem;
+--fnt-size-big: 1.8rem;
+--fnt-size-med: 1.5rem;
+--fnt-size-smll: 1.3rem;
+--fnt-size-ltl: 0.8rem;
+
+}
+
+/* -----------HEADER PHONE-------- */
+/*---NAV PHONE--- */
+#nav-bar {
+    grid-column: 1 / 3;
+    padding: 10px;
+}
+#nav-list {
+    padding: 0;
+}
+
+/* ---LOGO PHONE--- */
+.logo {
+    grid-column: 3 / -1;
+    margin-right: 20px;
+}
+
+/* ---REDES PHONE--- */
+.redes  {
+    display: none;
+}
+/* ----------MAIN PHONE----------- */
+#main {
+    grid-template-rows: 98vh 50vh 50vh 50vh 130vh 100vh;
+}
+
+/* ---INTRO PHONE--- */
+.intro {
+    grid-template-areas: 
+    ". . . . . . . . . ."
+    ". t t t t t t t t ."
+    ". t t t t t t t t ."
+    ". . . b b b b . . ."
+    ". . . . . . . . . ."
+;
+}
+
+/* ---FIRST PHONE--- */
+.first-info {
+    grid-column: 1 / -1;
+    background-image: linear-gradient(rgba(21, 21, 21, 0.7), rgba(21, 21, 21, 0.7)), url(fotos/fotos/confortable.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.first-img {
+    display: none;
+}
+.first-item {
+    font-size: var(--fnt-size-smll);
+}
+.first-title {
+    font-size: var(--fnt-size-big);
+}
+.first-item {
+    margin: 15px 0;
+}
+.first-btn {
+    padding: 8px 15px;
+}
+
+
+/* ---SECOND PHONE--- */
+.second-info {
+    grid-column: 1 / -1;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(fotos/fotos/cowork.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.second-img {
+    display: none;
+}
+.second-item {
+    font-size: var(--fnt-size-smll);
+    margin: 15px 0;
+}
+.second-title {
+    font-size: var(--fnt-size-big);
+}
+.second-btn {
+    padding: 8px 15px;
+}
+
+
+/* ---MEDIA PHONE--- */
+#video {
+    width: 80%;
+    height: auto;
+}
+
+/* ---TARJETA PHONE--- */
+
+.tarjeta-box {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.tarjeta {
+    height: 30%;
+    width: 60%;
+}
+.tarjeta-1 {
+    grid-area: a;
+}
+
+.tarjeta-2 {
+    grid-area: b;
+}
+
+.tarjeta-3 {
+    grid-area: c;
+}
+
+/* ---FORMULARIO PHONE--- */
+#form {
+    width: 80%;
+    height: auto;
+}
+
+
+/* ----------FOOTER PHONE--------- */
 
  }

@@ -131,7 +131,7 @@ html {
     padding: 0;
 
     display: grid;
-    grid-template-rows: 98vh 70vh 70vh 98vh 70vh 50vh;
+    grid-template-rows: 98vh 90vh 90vh 98vh 70vh 70vh;
     z-index: -1;
     
 }

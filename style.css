@@ -541,7 +541,7 @@ html {
 
 /* ----------MAIN TABLET----------- */
     #main {
-        grid-template-rows: 98vh 50vh 50vh 50vh 50vh 50vh;
+        grid-template-rows: 98vh 50vh 50vh 50vh 70vh 70vh;
     }
 
           /* ---INTRO--- */
@@ -581,7 +581,7 @@ html {
 
     .tarjeta-box {
         display: grid;
-        grid-template: repeat(5, 10vh) / 1fr repeat(3, 28vw) 1fr;
+        grid-template:  12vh repeat(3, 15vh) 12vh / 1fr repeat(3, 28vw) 1fr;
         grid-template-areas: 
         ". . . . ."
         ". a b c ."

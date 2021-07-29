@@ -50,13 +50,19 @@
     --brd-med: 15px;
     --brd-smll: 6px;
 }
-body {
-    margin: 0;
-    padding: 0;
-    /* background-color: var(--clr-dark-1); */
-}
 html {
     scroll-behavior: smooth;
+}
+body {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--clr-dark-2);
 }
 /* ---------------------------------HEADER----------------------------------- */
 
@@ -130,8 +136,11 @@ html {
     margin: 0;
     padding: 0;
 
-    display: grid;
-    grid-template-rows: 98vh 90vh 90vh 98vh 70vh 70vh;
+    display: flex;
+    flex-flow: column nowrap;
+
+/*     display: grid;
+    grid-template-rows: 98vh 90vh 90vh 98vh auto 70vh; */
     z-index: -1;
     
 }
@@ -163,7 +172,6 @@ html {
     grid-area: t;
     color: var(--clr-bright-1)
 }
-
 .intro-frase {
     text-align: center;
 }
@@ -184,7 +192,6 @@ html {
     font-style: normal;
     letter-spacing: 0.03rem;
 }
-
 .intro-btn {
     align-self: start;
     grid-area: b;
@@ -204,9 +211,8 @@ html {
     cursor: pointer;
 }
 
-
-
 /* ---FIRST--- */
+
 .first {
     grid-row: 2 / 3;
 
@@ -239,14 +245,12 @@ html {
 .first-list {
     margin: 0 8% 0 8%;
 }
-
 .first-title {
     font-size: var(--fnt-size-title);
     font-family: var(--fnt-sub);
     font-weight: 500;
     letter-spacing: 0.03rem;
 }
-
 .first-item {
     font-family: var(--fnt-p);
     font-size: var(--fnt-size-smll);
@@ -283,7 +287,6 @@ html {
     display: grid;
     grid-template-columns: 50vw 50vw;
 }
-
 .second-info {
     grid-column: 1 / 2;
     
@@ -302,25 +305,20 @@ html {
     background-size: cover;
     background-position: center;
 }
-
 .second-text {
     margin: 5% 8% 0 8%;
     list-style: none;
     padding: 0;
 }
-
-
 .second-title {
     font-size: var(--fnt-size-title);
     font-family: var(--fnt-sub);
     font-weight: 500;
     letter-spacing: 0.03rem;
 }
-
 .second-list {
     margin: 0 8% 0 8%;
 }
-
 .second-item {
     font-family: var(--fnt-p);
     font-size: var(--fnt-size-smll);
@@ -330,7 +328,6 @@ html {
     
     margin: 40px 0;
 }
-
 .second-btn {
     align-self: center;
 
@@ -354,8 +351,9 @@ html {
 
 .media {
     grid-row: 4 / 5;
-
+    
     width: 100vw;
+    height: 100vh;
     background-color: var(--clr-dark-2);
     display: flex;
     align-items: center;
@@ -390,8 +388,9 @@ html {
 }
 .tarjeta {
     background-color: var(--clr-bright-1);
-    width: 25%;
-    height: 70%;
+    min-width: 19.75rem;
+    width: 23rem;
+    height: 31rem;
 
     display: flex;
     flex-direction: column;
@@ -403,10 +402,9 @@ html {
     border-radius: var(--brd-smll);
     border: 3px solid var(--clr-bright-3);
 }
-
 .titulo-tarjeta {
     width: 100%;
-    margin-top: 0;
+    margin: 0;
     padding: 10px;
     background-color: var(--clr-bright-3);
     color: var(--clr-bright-1);
@@ -416,36 +414,34 @@ html {
     font-weight: 500;
     letter-spacing: 0.03rem;
 }
-
 .tarjeta-info {
     font-size: var(--fnt-size-smll);
     margin: 0 20px;
-    height: 80%;
+    min-height: 80%;
+    height: auto;
+    padding: 1rem 0.55rem;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
-
 .tarjeta-subtitulo {
     font-size: var(--size-smll);
     font-weight: bold;
-    margin: 0;
+    margin: 1rem 0;
 }
-
 .tarjeta-descripcion {
-    margin: 0;
+    margin: 1rem 0;
 }
-
 .tarjeta-precio {
     font-size: var(--size-smll);
     font-weight: bold;
-    margin: 0;
+    margin: 1rem 0;
 }
-
 .tarjeta-btn {
     width: 100%;
+    height: 3rem;
     margin-top: 0;
     padding: 10px;
     background-color: var(--clr-bright-3);
@@ -457,16 +453,18 @@ html {
     font-weight: 400;
     letter-spacing: 0.03rem;
     border: none;
+    border-radius: 0 0 var(--brd-smll) var(--brd-smll);
 
 }
 
-
-
 /* ---FORMULARIO--- */
+
 .formulario {
     grid-row: 6 / 7;
 
     width: 100%;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -488,10 +486,10 @@ html {
     
 }
 .form-element {
-     width: 90%;
-     margin: 5px 5%;
-     display: inline-block;
- }
+    width: 90%;
+    margin: 5px 5%;
+    display: inline-block;
+}
 .form-input {
     border: 2px solid var(--clr-bright-3);
     padding: 5px;
@@ -501,30 +499,45 @@ html {
     font-size: var(--size-smll);
     font-weight: bold;
 }
- #info {
-     width: 90%;
-     min-width: 90%;
-     max-width: 90%;
-     height: 100px;
-     min-height: 100px;
-     max-height: 100px;
-     border: 2px solid var(--clr-bright-3);
+#info {
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    border: 2px solid var(--clr-bright-3);
+}
+#submit {
+    width: 90%;
+    background-color: var(--clr-bright-3);
+    color: var(--clr-bright-1);
+    border-radius: var(--brd-smll);
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 5% 10px 5%;
+}
+
+ /* ---------------------FOOTER------------------------- */
+
+ footer {
+    width: 100%;
+    height: 5rem;
+    align-items: center;
+    text-align: center;
+    background-color: var(--clr-dark-2);
  }
- #submit {
-     width: 90%;
-     background-color: var(--clr-bright-3);
-     color: var(--clr-bright-1);
-     border-radius: var(--brd-smll);
-     border: none;
-     padding: 10px 20px;
-     margin: 20px 5% 10px 5%;
+
+ footer > p, footer > p > a {
+    font-family: var(--fnt-sub);
+    color: var(--clr-bright-1);
  }
 
  /* -------------------MEDIA QUERYS-------------------- */
 
  /* ---------------TABLET----------------- */
 
- @media screen and (max-width: 1024px) and (min-width: 601px) {
+ @media screen and (max-width: 1024px) and (min-width: 670px) {
      /* -----------GLOBAL TABLET-------- */
     :root {
             /* fonts var */
@@ -539,13 +552,13 @@ html {
 
     /* -----------HEADER TABLET-------- */
     
-
     /* ----------MAIN TABLET----------- */
+
     #main {
         grid-template-rows: 98vh 50vh 50vh 50vh 70vh 70vh;
     }
-
-          /* ---INTRO--- */
+    /* ---INTRO--- */
+    
     .intro {
         grid-template-areas: 
         ". . . . . . . . . ."
@@ -557,6 +570,7 @@ html {
     }
 
     /* ---FIRST--- */
+
     .first-item {
         font-size: var(--fnt-size-smll);
     }
@@ -582,7 +596,7 @@ html {
 
     .tarjeta-box {
         display: grid;
-        grid-template: repeat(5, 20%)  / 6% 25% 6% 25% 6% 25% 6%;
+        grid-template: 5% repeat(3, 1fr) 5% / 1fr 5fr 1fr 5fr 1fr 5fr 1fr;
         grid-template-areas: 
         ". . . . . . ."
         ". a . b . c ."
@@ -593,30 +607,27 @@ html {
     justify-content: center;
     }
     .tarjeta {
-        height: 100%;
-        width: 100%;
+      width: 20rem;
+      height: 36rem;  
     }
     .tarjeta-1 {
         grid-area: a;
     }
-
     .tarjeta-2 {
         grid-area: b;
     }
-
     .tarjeta-3 {
         grid-area: c;
     }
 
     /* ---FORMULARIO--- */
+
     #form {
         width: 50%;
         height: auto;
     }
 
-
- /* ----------FOOTER TABLET--------- */
-
+    /* ----------FOOTER TABLET--------- */
  }
 /* -----------------PHONE----------------- */
 
@@ -635,6 +646,7 @@ html {
 
     /* -----------HEADER PHONE-------- */
     /*---NAV PHONE--- */
+
     #nav-bar {
         grid-column: 1 / 3;
         padding: 10px;
@@ -650,15 +662,19 @@ html {
     }
     
     /* ---REDES PHONE--- */
+
     .redes  {
         display: none;
     }
+
     /* ----------MAIN PHONE----------- */
+
     #main {
         grid-template-rows: 98vh 50vh 50vh 50vh 130vh 100vh;
     }
     
     /* ---INTRO PHONE--- */
+
     .intro {
         grid-template-areas: 
         ". . . . . . . . . ."
@@ -670,6 +686,7 @@ html {
     }
 
     /* ---FIRST PHONE--- */
+
     .first-info {
         grid-column: 1 / -1;
         background-image: linear-gradient(rgba(21, 21, 21, 0.7), rgba(21, 21, 21, 0.7)), url(fotos/fotos/confortable.jpg);
@@ -695,6 +712,7 @@ html {
 
 
     /* ---SECOND PHONE--- */
+
     .second-info {
         grid-column: 1 / -1;
         background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(fotos/fotos/cowork.jpg);
@@ -716,10 +734,10 @@ html {
         padding: 8px 15px;
     }
 
-
     /* ---MEDIA PHONE--- */
+
     #video {
-        width: 80%;
+        width: 70vw;
         height: auto;
     }
 
@@ -727,6 +745,9 @@ html {
 
     .tarjeta-box {
         display: flex;
+        width: 100vw;
+        min-height: 100vh;
+        height: auto;
         flex-direction: column;
         align-content: space-between;
         align-items: center;
@@ -734,27 +755,16 @@ html {
         flex-wrap: nowrap;
     }
     .tarjeta {
-        height: 30%;
-        width: 60%;
-    }
-    .tarjeta-1 {
-        grid-area: a;
-    }
-
-    .tarjeta-2 {
-        grid-area: b;
-}
-
-    .tarjeta-3 {
-        grid-area: c;
+        width: 15rem;
+        margin: 2rem 0;
     }
 
     /* ---FORMULARIO PHONE--- */
+
     #form {
         width: 80%;
         height: auto;
     }
-
 
     /* ----------FOOTER PHONE--------- */
 }

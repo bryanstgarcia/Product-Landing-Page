@@ -141,14 +141,13 @@ body {
 
 /*     display: grid;
     grid-template-rows: 98vh 90vh 90vh 98vh auto 70vh; */
-    z-index: -1;
+
     
 }
 
 /* ---INTRO--- */
 
 .intro {
-    grid-row: 1 / 2;
 
     display: grid;
     grid-template: repeat(5, 20vh) / repeat(10, 10vw);
@@ -735,7 +734,10 @@ body {
     }
 
     /* ---MEDIA PHONE--- */
-
+    .media {
+        height: auto;
+        margin: 3rem 0;
+    }
     #video {
         width: 70vw;
         height: auto;
